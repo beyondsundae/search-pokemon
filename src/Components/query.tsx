@@ -1,0 +1,42 @@
+const query = (name: any) => (  `{
+    pokemon( name: "${name}"){
+      id
+      number
+      image
+      name
+      weight{
+        minimum
+        maximum
+      }
+      height{
+        minimum
+        maximum
+      }
+      classification
+      types
+      resistant
+      weaknesses
+      image
+      evolutions{
+        id
+        number
+        name
+        image
+        classification
+      }
+       attacks{
+        fast{
+          name
+          type
+          damage
+        }
+        special{
+          name
+          type
+          damage
+        }
+      }
+    }
+  }
+`)
+  export default query
